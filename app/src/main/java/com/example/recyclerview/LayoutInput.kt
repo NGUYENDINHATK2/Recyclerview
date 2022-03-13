@@ -24,6 +24,7 @@ class LayoutInput: AppCompatActivity() {
             data.add(binding.tvtitle.text.toString())
             data.add(binding.tvdetail.text.toString())
             intent.putExtra("data",data)
+
             startActivity(intent)
         }
     }
