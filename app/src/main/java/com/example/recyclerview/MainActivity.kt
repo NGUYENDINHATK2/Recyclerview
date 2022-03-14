@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
+    // Sao luuw data cu
     override fun onResume() {
         super.onResume()
         binding.recyclerview.adapter?.notifyDataSetChanged()

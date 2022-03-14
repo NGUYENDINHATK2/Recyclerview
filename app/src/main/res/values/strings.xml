@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Recyclerview</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
+    <string name="nh_p_d_li_u_v_o">Nhập Dữ Liệu Vào</string>
+    <string name="title">Title :</string>
+    <string name="titleinput">Title ....</string>
+    <string name="detailinput">Detail :</string>
+    <string name="detailinput1">Detail....</string>
+    <string name="save">Save</string>
 </resources>
