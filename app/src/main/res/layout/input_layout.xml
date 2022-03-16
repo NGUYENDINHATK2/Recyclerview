@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
    android:background="#81c0f3"
     android:layout_height="match_parent">
@@ -20,23 +20,15 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:text="@string/nh_p_d_li_u_v_o"
+
             android:gravity="center"
             android:paddingBottom="50dp"
             android:textSize="30sp"
             android:textStyle="bold"
             android:textColor="@color/black"/>
 
-        <TextView
-            android:id="@+id/nametitle"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="15dp"
-            android:text="@string/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/nametag"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:textSize="25sp"/>
+
+
 
         <EditText
             android:id="@+id/tvtitle"
@@ -47,43 +39,39 @@
             android:layout_marginTop="1dp"
             android:layout_marginStart="15dp"
 
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/titleinput"
             app:layout_constraintTop_toBottomOf="@id/nametag"
-            app:layout_constraintLeft_toRightOf="@id/nametitle"/>
-        <TextView
-            android:id="@+id/namedetail"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="15dp"
-            android:text="@string/detailinput"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/nametitle"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:textSize="25sp"/>
+
+            android:autofillHints=""
+            android:inputType="text" />
+
 
         <EditText
             android:id="@+id/tvdetail"
 
-
+            android:inputType="number"
 
             android:padding="15dp"
             android:layout_marginTop="1dp"
             android:layout_marginStart="15dp"
 
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/detailinput1"
             app:layout_constraintTop_toBottomOf="@id/tvtitle"
-            app:layout_constraintLeft_toRightOf="@id/namedetail"/>
+
+            android:autofillHints="" />
 
 
             <Button
                 android:gravity="center"
                 android:id="@+id/save"
+
                 android:layout_marginTop="15dp"
                 android:text="@string/save"
+
                 android:layout_width="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/tvdetail"
                 app:layout_constraintLeft_toLeftOf="parent"

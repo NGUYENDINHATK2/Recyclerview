@@ -4,8 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android/Recyclerview/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2555" />
+        <entry key="..\:/Android/Recyclerview/app/src/main/res/drawable/bg.xml" value="0.1585" />
         <entry key="..\:/Android/Recyclerview/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Android/Recyclerview/app/src/main/res/layout/card_layout.xml" value="0.22826086956521738" />
+        <entry key="..\:/Android/Recyclerview/app/src/main/res/layout/card_layout.xml" value="0.16" />
         <entry key="..\:/Android/Recyclerview/app/src/main/res/layout/input_layout.xml" value="0.24682971014492755" />
       </map>
     </option>

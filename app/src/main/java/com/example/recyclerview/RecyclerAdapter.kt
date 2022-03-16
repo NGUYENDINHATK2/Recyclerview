@@ -1,21 +1,24 @@
 package com.example.recyclerview
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import kotlin.random.Random
 
 
 class RecyclerAdapter(private val mList: List<ItemsViewModel>) : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>()  {
 //    onCreateViewHolder (): Hàm này thiết lập các khung nhìn để hiển thị các mục.
 //onBindViewHolder (): Hàm này được sử dụng để liên kết các mục trong danh sách với các widget của chúng tôi như TextView, ImageView, v.v.
 //getItemCount (): Nó trả về số lượng các mục có trong danh sách.
+fun randomColor():Int{return  Random.nextInt(0, 1000)}
 
-    private var titles=arrayOf("c1","c2")
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerAdapter.ViewHolder {
         val v= LayoutInflater.from(parent.context).inflate(R.layout.card_layout,parent,false)
+//        v.setBackgroundColor(Color.argb(randomColor(),randomColor(),randomColor(),randomColor() ))
         return  ViewHolder(v)
     }
 
