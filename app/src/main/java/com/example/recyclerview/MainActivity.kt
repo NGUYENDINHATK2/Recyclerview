@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         val datainput : ArrayList<String>?= intent.getStringArrayListExtra("data")
         var data1= datainput?.get(0)
         var data2=datainput?.get(1)
-
+        binding.itemImage.setImageResource(R.drawable.img)
         if(datainput!=null){
             data.add(ItemsViewModel(R.drawable.img,data1.toString() ,data2.toString()))
         }
