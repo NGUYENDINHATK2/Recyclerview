@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         var data2=datainput?.get(1)
 
         if(datainput!=null){
-            data.add(ItemsViewModel(R.drawable.raiden,data1.toString() ,data2.toString()))
+            data.add(ItemsViewModel(R.drawable.img,data1.toString() ,data2.toString()))
         }
         val adapter = RecyclerAdapter(data)
         recyclerview.adapter = adapter
