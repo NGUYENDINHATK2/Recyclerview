@@ -3,17 +3,16 @@ package com.example.recyclerview
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.recyclerview.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding:ActivityMainBinding
-
     companion object {
        var  data =  ArrayList<ItemsViewModel>()
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -27,17 +26,24 @@ class MainActivity : AppCompatActivity() {
         if(datainput!=null){
             data.add(ItemsViewModel(R.drawable.img,data1.toString() ,data2.toString()))
         }
-        val adapter = RecyclerAdapter(data)
+        var adapter = RecyclerAdapter(data)
         recyclerview.adapter = adapter
+        adapter.setOnItemClickListener(object :RecyclerAdapter.onItemClickListener{
+            override fun onItemClick(position: Int) {
+                Toast.makeText(this@MainActivity,data[position].title,Toast.LENGTH_SHORT).show()
+            }
+
+        })
+
+
+
+
 
         binding.fabAdd.setOnClickListener {
             val intent: Intent = Intent (this, LayoutInput::class.java)
-
             startActivity(intent)
         }
     }
-
-    // Sao luuw data cu
     override fun onResume() {
         super.onResume()
         binding.recyclerview.adapter?.notifyDataSetChanged()

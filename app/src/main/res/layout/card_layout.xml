@@ -52,6 +52,18 @@
             app:layout_constraintLeft_toRightOf="@id/item_image"
             android:textColor="@color/black"/>
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/item_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:text="ok"
+            app:layout_constraintTop_toBottomOf="@id/item_detail"
+            app:layout_constraintLeft_toRightOf="@id/item_image"
+
+            />
+
 
 
 
