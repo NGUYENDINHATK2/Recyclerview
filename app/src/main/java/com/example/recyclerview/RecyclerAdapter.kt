@@ -27,6 +27,7 @@ private lateinit var mListener:onItemClickListener
 interface  onItemClickListener{
 
     fun onItemClick(position:Int)
+    fun onItemClickView(position:Int)
 }
     fun setOnItemClickListener(listener:onItemClickListener){
         mListener=listener
@@ -43,6 +44,7 @@ interface  onItemClickListener{
     override fun onBindViewHolder(holder: RecyclerAdapter.ViewHolder, position: Int) {
 
         val ItemsViewModel=mList[position]
+        holder.click=3
         holder.itemtitle.text=ItemsViewModel.title
         holder.itemdetail.text=ItemsViewModel.detail
         holder.itemimage.setImageResource(ItemsViewModel.image)
@@ -63,7 +65,7 @@ interface  onItemClickListener{
 
 
     inner  class ViewHolder(itemView: View,listener:onItemClickListener):RecyclerView.ViewHolder(itemView){
-
+        var click:Int=0
        var itemimage: ImageView
        var itemtitle: TextView
        var itemdetail :TextView
@@ -76,6 +78,9 @@ interface  onItemClickListener{
 
            itenbtn.setOnClickListener{
                listener.onItemClick(adapterPosition)
+           }
+           itemView.setOnClickListener{
+               listener.onItemClickView(adapterPosition)
            }
 
        }
